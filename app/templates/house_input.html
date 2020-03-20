@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="POST" action="">
+	{{ form.hidden_tag() }}
+	<fieldset class="form-group">
+		<legend class="border-bottom mb-4">Add Home</legend>
+		  <div class="form-group">
+			  {{ form.address.label() }}
+			  {{ form.address() }}
+		  </div>
+		  <div class="form-group">
+			  {{ form.price.label() }}
+			  {{ form.price() }}
+		  </div>
+		  <div class="form-group">
+			  {{ form.rent.label() }}
+			  {{ form.rent() }}
+		  </div>
+		  <div class="form-group">
+			  {{ form.rooms.label() }}
+			  {{ form.rooms() }}
+		  </div>
+		  <div class="form-group">
+			  {{ form.taxes.label() }}
+			  {{ form.taxes() }}
+		  </div>
+	</fieldset>
+	<div class="form-group">
+		{{ form.submit() }}
+	</div>
+</form>
+{% endblock content %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+	    House Information
+	<ul class="list-group">
+	  <li class="list-group-item">Address - {{house['address']}}</li>
+	  <li class="list-group-item">Sale Price - {{house['price']}}$</li>
+	  <li class="list-group-item">Rent - {{house['rent']}}$</li>
+	</ul>
+    </div>
+    <div class="col-sm">
+	    <img src="{{ url_for('static', filename='image.png') }}">
+    </div>
+  </div>
+</div>
+<div class="download-link">
+	<p> click here to download a full report</p>
+</div>
+{% endblock content %}
